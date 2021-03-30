@@ -10,7 +10,6 @@ class SignIn extends Component {
     render(){
         return (
             <div className='sign-in'> 
-                <PageHeader className='sign-in__page-header' title='Welcome to MBG'/>
                 <PageHeader className='sign-in__page-title' title='Login' />
                 <SignInForm onSubmit={this.onSubmit} className='sign-in__form' />
             </div>

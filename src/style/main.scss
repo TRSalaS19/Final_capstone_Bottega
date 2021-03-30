@@ -9,11 +9,17 @@ html {
     padding: 0;
     box-sizing: inherit;
 }
+@import './mixins.scss';
+
+body {
+    font-family: 'Concert One', cursive ;
+    color: $greenBlue;
+}
 
 @import './layout.scss';
-@import './mixins.scss';
 @import './navbar.scss';
 @import './auth/signin.scss';
 @import './auth//signup.scss';
 
 @import './header.scss';
+@import './form-fields.scss';

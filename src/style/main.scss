@@ -1,3 +1,4 @@
+@import './mixins.scss';
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -9,7 +10,6 @@ html {
     padding: 0;
     box-sizing: inherit;
 }
-@import './mixins.scss';
 
 body {
     font-family: 'Concert One', cursive ;
@@ -20,6 +20,6 @@ body {
 @import './navbar.scss';
 @import './auth/signin.scss';
 @import './auth//signup.scss';
-
+@import './page-links.scss';
 @import './header.scss';
 @import './form-fields.scss';

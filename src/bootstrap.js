@@ -12,8 +12,11 @@ import "./style/main.scss";
 import history from './history';
 
 import Layout from './components/layout';
-import Signin from './auth/signin';
-import Signup from './auth/signup';
+import SignIn from './auth/signIn';
+import SignUp from './auth/signUp';
+import Account from './components/account';
+import Services from './components/services';
+import ContactMe from './components/contactMe';
 
 function main() {
   ReactDOM.render(
@@ -21,9 +24,12 @@ function main() {
       <Router history={history}>
         <Layout>
             <Switch>
-              <Route path='/' exact component={Signin} />
-              <Route path='/signin' exact component={Signin} />
-              <Route path='/signup' exact component={Signup} />
+              <Route path='/' exact component={SignIn} />
+              <Route path='/signin' exact component={SignIn} />
+              <Route path='/signup' exact component={SignUp} />
+              <Route path='/account' exact component={Account} />
+              <Route path='/contact-me' exact component={ContactMe} />
+              <Route path='/services' exact component={Services} />
             </Switch>
 
         </Layout>

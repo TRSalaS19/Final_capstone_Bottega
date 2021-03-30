@@ -10,7 +10,9 @@ class NavBar extends Component {
                 <div className='navbar__container'>  
                     <div className='navbar__links-container'>
                         <div className='navbar__logo-container'>
-                            <i class="fas fa-spa"></i>
+                            <Link to='/' className='navbar__logo-link'>
+                                <i className="fas fa-spa"></i>
+                            </Link>
                             <div className='navbar__logo-text'>
                                 MassageByGus
                             </div>
@@ -19,7 +21,7 @@ class NavBar extends Component {
                         <Link to='/signup' className='navbar__links'>Sign-Up</Link>
                         <Link to='/account' className='navbar__links'>Account</Link>
                         <Link to='/services' className='navbar__links'>Services</Link>
-                        <Link to='/contact' className='navbar__links'>Contact Me</Link>
+                        <Link to='/contact-me' className='navbar__links'>Contact Me</Link>
                     </div>
                 </div>  
             </nav>

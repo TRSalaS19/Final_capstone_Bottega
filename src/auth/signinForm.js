@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 
+import history from '../history';
 import PageLinks from '../components/pageLinks';
 import { FormInput, FormButton } from '../components/formFields';
 
@@ -12,8 +13,18 @@ class SignInForm extends Component {
         const links = [
             {
                 _id: 0,
-                title: "hey there",
-                onClick: () => console.log('hey there')
+                title: "New Visitor? Create an account here",
+                onClick: () => history.push('/signup')
+            },
+            {
+                _id: 1,
+                title: "See Services Offered",
+                onClick: () => history.push('/services')
+            },
+            {
+                _id: 2,
+                title: "Forgot Password?",
+                onClick: () => console.log('Send them to recover password')
             }
         ];
 

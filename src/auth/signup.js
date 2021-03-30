@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 
+import SignUpForm from './signUpForm';
+import PageHeader from '../components/pageHeader';
+
 class SignUp extends Component {
-    render() {
+    onSubmit = (fields) => {
+        console.log(fields);
+    }
+
+    render(){
         return (
             <div className='sign-up'>
-                sign uppp
+                <PageHeader className='sign-up__page-title' title='Sign Up'/>
+                <SignUpForm onSubmit={this.onSubmit} className='sign-up__form' />
             </div>
         )
     }

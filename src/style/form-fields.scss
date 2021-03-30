@@ -34,7 +34,7 @@
         width: 100px;
         border-radius: 20px;
         background-color: $brightBlue;
-        font-size: 20px;
+        font-size: 18px;
         color: white;
         transition: 0.2s;
 
@@ -42,5 +42,9 @@
             outline: none;
             scale: 20px;
         }
+    }
+    &__orange-button {
+        background: $brightGreen;
+        width: 137px;
     }
 }

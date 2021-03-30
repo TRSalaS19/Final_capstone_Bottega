@@ -4,11 +4,13 @@
 
     &__form {
         display: grid;
-        grid-template-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 250px) [line-s] 2px [line-e login-s] 40px [login-e];
+        grid-template-rows: [email-s] 60px [email-e password-s] 100px [password-e] minmax(20px, 250px) [line-s] 2px [line-e login-s] 100px [login-e];
+        grid-column: 1fr;
     }
 }
 
 .sign-in-form {
+
     &__email {
         grid-row: email-s/email-e;
     }
@@ -22,6 +24,20 @@
     }
     &__login {
         grid-row: login-s/login-e;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+    .page-links {
+        grid-row: 1/-1;
+        justify-content: start;
+        align-self: start;
+
+        transition: 0.5s;
+
+        &:hover {
+            text-decoration-line: none;
+            scale: 20px;
+            cursor: pointer;
+        }
     }
 }

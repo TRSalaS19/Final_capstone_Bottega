@@ -1,29 +1,20 @@
 .page-links {
     display: grid;
     grid-row-gap: 20px;
+    align-items: start;
 
 
     &__title {
         padding-bottom: 10px;
         border-bottom: 1px solid $greenBlue;
-        font-size: 16px;
-        font-weight: 800;
+        font-size: 25px;
+        font-weight: 700;
     }
     &__links{
-        font-size: 14px;
+        font-size: 16px;
         display: grid;
         grid-row-gap: 10px;
-        text-decoration-line: none;
-
-        &__link{
-            transition: 0.5s;
-
-            &:hover {
-                text-decoration-line: underline;
-                scale: 20px;
-                cursor: pointer;
-            }
-        }
+        text-decoration-line: underline;
     }
 
 }

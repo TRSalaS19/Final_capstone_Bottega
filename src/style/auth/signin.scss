@@ -4,7 +4,7 @@
 
     &__form {
         display: grid;
-        grid-template-rows: [email-s] 60px [email-e password-s] 100px [password-e] minmax(20px, 250px) [line-s] 2px [line-e login-s] 100px [login-e];
+        grid-template-rows: [email-s email-e] 60px [password-s] 60px [password-e] minmax(20px, 200px) [line-s] 2px [line-e login-s] 100px [login-e];
         grid-column: 1fr;
     }
 }
@@ -29,15 +29,18 @@
     }
     .page-links {
         grid-row: 1/-1;
-        justify-content: start;
+        justify-content: end;
         align-self: start;
 
-        transition: 0.5s;
-
-        &:hover {
-            text-decoration-line: none;
-            scale: 20px;
-            cursor: pointer;
+        &__links {
+            transition: 0.5s;
+        
+            :hover {
+                color: $brightBlue;
+                transform: scale(1,2);
+                text-decoration-line: underline;
+                cursor: pointer;
+            }
         }
     }
 }

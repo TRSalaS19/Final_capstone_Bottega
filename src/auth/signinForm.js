@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 
-import history from '../history';
-import PageLinks from '../components/pageLinks';
 import { FormInput, FormButton } from '../components/formFields';
+import PageLinks from '../components/pageLinks';
+
+import history from '../history';
 
 
 class SignInForm extends Component {
@@ -30,6 +31,7 @@ class SignInForm extends Component {
 
         return (
             <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
+                
                 <Field className='sign-in-form__email' 
                 type='email'
                 title='Email'
@@ -47,8 +49,8 @@ class SignInForm extends Component {
                 <div className='sign-in-form__line'></div>
 
                 <Field className='sign-in-form__login'
-                onClick={() => console.log('Trying to submit')}
-                type='login'
+                onClick={() => history.push('/account')}
+                type='submit'
                 title='Login'
                 name='login'
                 component={FormButton}/>

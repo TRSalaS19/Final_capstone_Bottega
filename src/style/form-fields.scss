@@ -29,22 +29,22 @@
 }
 
 .form-button {
+
     &__button{
         height: 40px;
-        width: 100px;
+        width: 150px;
         border-radius: 20px;
-        background-color: $brightBlue;
+        background-color: $brightGreen;
         font-size: 18px;
-        color: white;
+        color: $greenBlue;
         transition: 0.2s;
 
-        &:focus {
-            outline: none;
-            scale: 20px;
+        &:hover {
+            transform: scale(1, 1.2);
         }
     }
     &__orange-button {
-        background: $brightGreen;
-        width: 137px;
+        background: $brightBlue;
+        width: 150px;
     }
 }

@@ -1,7 +1,75 @@
+.header {
+    font-size: 20px;
+    color: $brightGreen;
+    grid-row: header-s/header-e;
+    grid-column: 1/-1;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: [logo-s] 1fr [logo-e links-s] 1fr [links-e];
+    background-image: url('../../static/assets/images/signin_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__logo {
+        font-size: 50px;
+        grid-column: logo-s/logo-e;
+        grid-row: 1/-1;
+
+    }
+    &__links {
+        grid-column: links-s/links-e;
+        grid-row: 1/-1;
+
+        display: grid;
+        grid-template-rows: [s] 1fr [e];
+        grid-column-gap: 20px;
+        margin-right: 20px;
+
+        & > * {
+            grid-row: s/e;
+        }
+    }
+
+    &__link {
+        transition: 0.2s;
+
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+
+.highlight-text {
+    color: $brightGreen !important;
+}
+
 .navbar {
     grid-row: nav-s/nav-e;
     grid-column: 1/-1;
     background-color: $brightBlue;
-    box-shadow: 0 5px 6px 0 rgba(0,0,0,0.5);
-    color: white;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.5);
+    color: $greenBlue;
+
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    align-items: center;
+
+    justify-content: center;
+    grid-column-gap: 50px;
+    font-size: 20px;
+
+    &__link{
+        transition: 0.2s;
+        
+        &:hover {
+            transform: scale(1.5, 1.5);
+        }
+    }
+
+    & > * {
+        grid-row: s/e;
+    }
 }

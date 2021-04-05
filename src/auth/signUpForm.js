@@ -13,7 +13,7 @@ class SignUpForm extends Component{
         const infoTxt = [
             {
                 _id:0,
-                title: 'At least 5 Characters'
+                title: 'At least 10 Characters'
             },
             {
                 _id:1,
@@ -26,13 +26,6 @@ class SignUpForm extends Component{
         ]
         return (
             <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
-                <Field className='sign-up-form__username'
-                    type='username'
-                    title="Username"
-                    placeholder='Username'
-                    name='username'
-                    component={FormInput}
-                    />
                 <Field className='sign-up-form__email'
                     type='email'
                     title='Email'
@@ -111,6 +104,7 @@ class SignUpForm extends Component{
                     component={FormInput}
                     />
                 <div className='sign-up-form__line'></div>
+                
                 <Field className='sign-up-form__login'
                     onClick={() => history.push('/account')}
                     type='submit'

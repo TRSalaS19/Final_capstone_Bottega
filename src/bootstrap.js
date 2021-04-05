@@ -14,7 +14,7 @@ import history from './history';
 import Layout from './components/layout';
 import SignIn from './auth/signIn';
 import SignUp from './auth/signUp';
-import Account from './components/account';
+import Account from './components/account/account';
 import Services from './components/services';
 import ContactMe from './components/contactMe';
 

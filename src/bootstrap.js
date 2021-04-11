@@ -29,7 +29,6 @@ function main() {
               <Route path='/signup' exact component={SignUp} />
               <Route path='/account' exact component={Account} />
               <Route path='/contact-me' exact component={ContactMe} />
-              <Route path='/services' exact component={Services} />
             </Switch>
 
         </Layout>

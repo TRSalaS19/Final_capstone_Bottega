@@ -1,0 +1,19 @@
+.service-history {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+
+    &__page-title {
+        border-bottom: 3px solid $brightBlue;
+    }
+    &__bottom-border {
+        border-bottom: 3px solid $brightBlue;
+    }
+}
+
+// .services {
+
+// }
+
+// .service-detail {
+
+// }

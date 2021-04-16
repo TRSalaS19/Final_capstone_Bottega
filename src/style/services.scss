@@ -1,0 +1,67 @@
+
+.services {
+    background-image: url('../../static/assets/images/backmassage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $greenBlue;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    
+    justify-content: center;
+    align-items: center;
+    
+    // transition: 1s ease-in-out;
+    
+    .services__page-title {
+        margin-top: 30px;
+    }
+}
+
+.service-list-container{
+    background-color: $brightBlue;
+    border-radius: 20px;
+
+    transition: .5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+.service-item__service {
+        height: 50px;
+        padding: 20px;
+        padding-bottom: 50px;
+        margin-top: 10px;
+        transition: .2s ease-in-out;
+        width: 500px;
+
+
+        &:hover {
+            border-radius: 10px;
+            color: $brightGreen;
+            transform: scale(1);
+        }
+
+        .service-item__name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .service-item__description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+
+        }
+
+}

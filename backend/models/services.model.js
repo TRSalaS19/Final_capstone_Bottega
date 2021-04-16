@@ -16,7 +16,6 @@ const serviceSchema = new Schema({
     img: {
         type: String
     }
-
 });
 
 const Service = mongoose.model('Service', serviceSchema);

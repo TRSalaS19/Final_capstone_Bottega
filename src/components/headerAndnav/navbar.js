@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 
+
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 
 class Navbar extends Component {
     render() {
-        const { className} = this.props;
+
         return (
-            <div className={`${className} navbar`}>
+            <div className='navbar'>
                 {
-                    this.props.navbarLinks.map((link,index) => {
+                    this.props.navbarLinks.map((link, index) => {
                         return (
-                            <a className={`navbar__link ${link.active ? 'highlight-text': ''}`} key={index} onClick={() => this.props.changeNavbarActive(link._id)}>
+                            <a className={`navbar__link ${link.active ? 'highlight-text': ''}`} key={index} onClick={() => history.push(link.path)}>
                                 {link.title}
                             </a>
                         )

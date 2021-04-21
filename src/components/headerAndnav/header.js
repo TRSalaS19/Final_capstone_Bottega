@@ -6,9 +6,9 @@ import history from '../../history';
 
 class Header extends Component{
     render() {
-        const {className} = this.props;
+
         return (
-            <div className={`${className} header`}>
+            <div className='header'>
                     <div className='header__logo'>
                         <i className="fas fa-spa"></i>
                     </div>

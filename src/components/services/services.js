@@ -1,10 +1,58 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../../actions';
+import history from '../../history';
 
 import ServicesContainer from './servicesContainer';
 import PageHeader from '../pageHeader';
+import AccountInfo from '../account/accountInfo';
 
 
-export default class Services extends Component{
+class Services extends Component{
+    componentDidMount(){
+        const navbarLinks = [
+            {   
+                _id: 0,
+                title: 'Services',
+                active: true,
+                path: '/services'
+            },
+            {
+                _id: 1,
+                title: 'Acount Information',
+                active:false,
+                path: '/account'
+            }
+        ]
+
+        const headerLinks = [
+            {
+                _id: 0,
+                title: 'Contact Me',
+                path: '/contactMe'
+            },
+            {
+                _id: 1,
+                title: 'Logout',
+                path: '/'
+            }
+        ]
+        this.props.setHeaderLinks(headerLinks);
+        this.props.setNavbarLinks(navbarLinks);
+    }
+
+    renderContent() {
+        let jsx;
+        if (this.props.navbarLinks) {
+            this.props.navbarLinks.forEach(link => {
+                if(link.active) {
+                    jsx = link.component;
+                }
+            })
+        }
+        return jsx;
+    }   
+
     render(){
         return (
             <div className='services'>
@@ -13,8 +61,19 @@ export default class Services extends Component{
             </div>
         )
     }
+
 }
-    // constructor(props){
+
+function mapStateToProps(state) {
+    const { headerLinks, navbarLinks} = state.headerNavbar;
+    return { headerLinks, navbarLinks}
+}
+
+Services = connect(mapStateToProps, actions)(Services);
+
+export default Services;
+
+// constructor(props){
     //     super(props);
         
     //     this.state = {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, FormButton } from '../components/formFields';
@@ -8,6 +7,7 @@ import PageLinks from '../components/pageLinks';
 import history from '../history';
 
 class SignUpForm extends Component{
+    
     render() {
         const { className, handleSubmit } = this.props;
         const infoTxt = [
@@ -40,13 +40,6 @@ class SignUpForm extends Component{
                     name='password'
                     component={FormInput}
                     />
-                <Field className='sign-up-form__confirm'
-                    type='password'
-                    title='Confirm Password'
-                    placeholder='Confirm Password'
-                    name='password'
-                    component={FormInput}
-                    />
                 <Field className='sign-up-form__fname'
                     type='first name'
                     title='First Name'
@@ -66,41 +59,6 @@ class SignUpForm extends Component{
                     title='Phone Number'
                     placeholder='Phone Number'
                     name='phone number'
-                    component={FormInput}
-                    />
-                <Field className='sign-up-form__addressOne'
-                    type='address one'
-                    title='Address One'
-                    placeholder="Address One"
-                    name='address one'
-                    component={FormInput}
-                    />
-                <Field className='sign-up-form__addressTwo'
-                    type='address two'
-                    title='Address Two'
-                    placeholder="Address Two"
-                    name='address two'
-                    component={FormInput}
-                    />
-                <Field className='sign-up-form__city'
-                    type='city'
-                    title='City'
-                    placeholder='City'
-                    name='city'
-                    component={FormInput}
-                    />
-                <Field className='sign-up-form__state'
-                    type='state'
-                    title='State'
-                    placeholder='State'
-                    name='state'
-                    component={FormInput}
-                    />
-                <Field className='sign-up-form__zipcode'
-                    type='zipcode'
-                    title='Zipcode'
-                    placeholder='Zipcode'
-                    name='zipcode'
                     component={FormInput}
                     />
                 <div className='sign-up-form__line'></div>

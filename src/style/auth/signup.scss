@@ -4,7 +4,7 @@
 
     &__form {
         display: grid;
-        grid-template-rows: 80px [email-s] 70px [email-e password-s] 70px [password-e confirm-s] 70px [confirm-e fname-s] 70px [fname-e lname-s] 70px [lname-e phoneNumber-s] 70px [phoneNumber-e addressOne-s] 70px [addressOne-e addressTwo-s] 70px [addressTwo-e city-s] 70px [city-e state-s] 70px [state-e zipcode-s] 70px [zipcode-e] minmax(20px, 150px) [line-s] 2px [line-e buttons-s] 10px [buttons-e];
+        grid-template-rows: 80px [email-s] 70px [email-e password-s] 70px [password-e fname-s] 70px [fname-e lname-s] 70px [lname-e phoneNumber-s] 70px [phoneNumber-e]  minmax(20px, 150px) [line-s] 2px [line-e buttons-s] 10px [buttons-e];
         grid-template-columns: [back-s] 200px [back-e create-s] 1fr [create-e] 1fr;
         grid-gap: 10px;
     }
@@ -21,9 +21,6 @@
     &__password {
         grid-row: password-s / password-e;
     }
-    &__confirm {
-        grid-row: confirm-s /confirm-e;
-    }
     &__fname {
         grid-row: fname-s/fname-e;
     }
@@ -32,21 +29,6 @@
     }
     &__phone-number {
         grid-row: phoneNumber-s/phoneNumber-e;
-    }
-    &__addressOne {
-        grid-row: addressOne-s/addressOne-e;
-    }
-    &__addressTwo{
-        grid-row: addressTwo-s/addressTwo-e;
-    }
-    &__city {
-        grid-row: city-s/city-e;
-    }
-    &__state {
-        grid-row: state-s/state-e;
-    }
-    &__zipcode {
-        grid-row: zipcode-s/zipcode-e;
     }
     &__line {
         grid-row: line-s/line-e;

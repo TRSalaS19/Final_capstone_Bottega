@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-// import PageHeader from '../pageHeader';
-
 import ServiceItem from './serviceItem';
 
 
